@@ -32,7 +32,7 @@ BrainBot is built for developers who want:
 
 - **Default agents: Jesse, James (you can create new)
 
-- **Make sure to set the mode to agents at start from the menu or you womt be able to talk to agents directly, same goes with directly communicating with LLM. (Know your mode)
+- **Make sure to set the mode to agents at start from the menu or you will not be able to talk to agents directly, same goes with directly communicating with the LLMs. (Know your mode)
 
 ---
 
