@@ -26,6 +26,30 @@ BrainBot is built for developers who want:
 
 ---
 
+## ⚠️ Issues
+
+- **Currently affinity is not working in the system
+
+- **Default agents: Jesse, James (you can create new)
+
+- **Make sure to set the mode to agents at start from the menu or you womt be able to talk to agents directly, same goes with directly communicating with LLM. (Know your mode)
+
+---
+
+## 🫡 Advice from the Creator:
+
+-If you use a model not on the list, follow the existing manifest.yaml template and add it.
+--the manifest file can be found at: /BrainBot/core/models/manifest.yaml
+
+-Assign custom roles from the agent.json file 
+--the agent file can be found inside: /BrainBot/core/agents/"agent name"/agent.json
+
+-Before you start, chat with the LLM directly, find a name it aligns to, create an agent with that name from the menu, go to the agents folder and assign it a custom role. Thank me later.
+
+-You can use BrainBot to do coding tasks with the dialoge loop prompt-window, make sure your instructions are clear, and interrupt with stop dialogue when the models start to drift. You are the operator of their autonomous coding.
+
+---
+
 ## 📦 Installation
 
 Clone the repository:
