@@ -33,6 +33,9 @@ Clone the repository:
 ```bash
 git clone https://github.com/GlyphicMind-Solutions/BrainBot
 cd BrainBot
+```
 
 #---install requirements---
+```
 pip install -r requirements.txt
+```
