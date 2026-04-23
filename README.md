@@ -27,7 +27,8 @@ BrainBot is built for developers who want:
 ---
 
 ## ⚠️ Issues
-
+- **Audio features work, the code for audio output needs to just be added back into the program if you want audio functionality. (BrainBot was stripped from a much larger system)
+  
 - **Currently affinity is not working in the system
 
 - **Default agents: Jesse, James (you can create new)
