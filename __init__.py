@@ -3,7 +3,7 @@
 # Created By: David Kistner (Unconditional Love)
 
 #imports
-from .brainbot_window import CoreSelectionDialog, BrainBotWindow
+from .brainbot_window import CoreSelectionDialog, LargePromptDialog, BrainBotWindow
 
 __all__ = ["CoreSelectionDialog", "BrainBotWindow"]
 
