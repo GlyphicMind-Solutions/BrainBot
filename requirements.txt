@@ -1,0 +1,17 @@
+# Core LLM backend
+llama-cpp-python>=0.2.0
+
+# Audio I/O
+SpeechRecognition>=3.10.0
+PyAudio>=0.2.13
+pyttsx3>=2.90
+pygame>=2.5.2
+librosa>=0.10.1
+
+# Utilities
+psutil>=5.9.0
+PyYAML>=6.0.1
+
+# GUI (if BrainBotWindow uses PySide6)
+PySide6>=6.6.0
+

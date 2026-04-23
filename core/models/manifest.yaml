@@ -1,0 +1,163 @@
+#/BrainBot/core/models
+# Supported Model List for BrainBot
+# Created By: David Kistner (Unconditional Love)
+mind_name: system.mind
+description: "Unified multi‑model LLM Manifest for BrainBot. All llama‑cpp compatible models included."
+
+models:
+
+  mistral-7b:
+    role: fast
+    path: mistral-7b-instruct-v0.2.Q4_K_M.gguf
+    backend: llama-cpp
+    temperature: 0.7
+    top_p: 0.9
+    top_k: 40
+    n_ctx: 32768
+
+  hermes-3b:
+    role: general
+    path: hermes-3b-q4_k_m.gguf
+    backend: llama-cpp
+    temperature: 0.2
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.1
+    n_ctx: 131072
+    stop:
+      - "<|im_end|>"
+      - "<|im_start|>user"
+      - "<|im_start|>system"
+      - "<|im_start|>assistant"
+
+  cerbero-7b:
+    role: general
+    path: ggml-model-Q4_K.gguf
+    backend: llama-cpp
+    temperature: 0.3
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.1
+    n_ctx: 32768
+    stop:
+      - "<|im_end|>"
+      - "<|im_start|>user"
+      - "<|im_start|>system"
+      - "<|im_start|>assistant"
+
+  qwen3-8b:
+    role: reasoning
+    path: Qwen3-8B-Q4_K_M.gguf
+    backend: llama-cpp
+    temperature: 0.5
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.15
+    n_ctx: 40960
+    stop:
+      - "<|im_end|>"
+      - "<|im_start|>user"
+      - "<|im_start|>system"
+      - "<|im_start|>assistant"
+
+  gpt-oss-20b:
+    role: deep_reasoning
+    path: gpt-oss-20b-MXFP4.gguf
+    backend: llama-cpp
+    temperature: 0.2
+    top_p: 0.9
+    top_k: 40
+    n_ctx: 131072
+
+  qwen2.5-coder:
+    role: coding
+    path: qwen2.5-coder-7b-instruct-q4_k_m.gguf
+    backend: llama-cpp
+    temperature: 0.2
+    top_p: 0.95
+    top_k: 40
+    repeat_penalty: 1.15
+    n_ctx: 131072
+    stop:
+      - "<|im_end|>"
+      - "<|im_start|>user"
+      - "<|im_start|>system"
+      - "<|im_start|>assistant"
+
+  wizardcoder:
+    role: coding
+    path: models/wizardcoder-python-7b-v1.0.Q4_K_M.gguf
+    backend: llama-cpp
+    temperature: 0.2
+    top_p: 0.95
+    top_k: 40
+    n_ctx: 16384
+
+  llama3-judge:
+    role: evaluation
+    path: models/llama3_7b_judge_perceptions.Q4_K_M.gguf
+    backend: llama-cpp
+    temperature: 0.1
+    top_p: 0.8
+    top_k: 20
+    n_ctx: 32768
+
+  llava-v1.6-vicuna-7b:
+    role: vision
+    path: models/llava-v1.6-vicuna-7b-Q4_K_M.gguf
+    mmproj: models/llava-v1.6-vicuna-7b-Q4_K_M.gguf
+    backend: llava
+    temperature: 0.2
+    top_p: 0.9
+    top_k: 40
+    repeat_penalty: 1.1
+    n_ctx: 32768
+    template: vicuna-llava
+    stop:
+      - "<|im_end|>"
+      - "<|im_start|>user"
+      - "<|im_start|>system"
+      - "<|im_start|>assistant"
+
+  phi-4-mini:
+    role: SNES
+    path: models/Phi-4-mini-instruct-Q4_K_M.gguf
+    backend: llama-cpp
+    temperature: 0.1
+    top_p: 0.8
+    top_k: 20
+    n_ctx: 131072
+
+routing:
+  fast:
+    - mistral-7b
+
+  general:
+    - hermes-3b
+    - cerbero-7b
+
+  reasoning:
+    - qwen3-8b
+
+  deep_reasoning:
+    - gpt-oss-20b
+
+  step-by-step_reasoning:
+    - deepseek-coder
+
+  coding:
+    - qwen2.5-coder
+    - wizardcoder
+
+  evaluation:
+    - llama3-judge
+
+  vision:
+    - llava-v1.6-vicuna-7b
+
+consensus:
+  enabled: false
+  strategy: weighted_majority
+  quorum: 3
+  fallback:
+
