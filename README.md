@@ -64,3 +64,9 @@ cd BrainBot
 ```
 pip install -r requirements.txt
 ```
+
+== IMPORTANT ==
+-The model directory is located:
+/BrainBot/core/models/
+*just place your LLM models in the model folder
+-new models that not on the manifest.yaml, add it according to template, and drop your model in.
