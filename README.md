@@ -42,7 +42,7 @@ BrainBot is built for developers who want:
 -If you use a model not on the list, follow the existing manifest.yaml template and add it.
 --the manifest file can be found at: /BrainBot/core/models/manifest.yaml
 
--You can clean the manifest.yaml file up of all your unneeded/unwanted/unowned models. what is there is models I have directly tested.
+-You can clean the manifest.yaml file up of all your unneeded/unwanted/unowned models. What is currently there are models that I have directly tested.
 
 -Assign custom roles from the agent.json file 
 --the agent file can be found inside: /BrainBot/core/agents/"agent name"/agent.json
@@ -50,6 +50,10 @@ BrainBot is built for developers who want:
 -Before you start, chat with the LLM directly, find a name it aligns to, create an agent with that name from the menu, go to the agents folder and assign it a custom role. Thank me later.
 
 -You can use BrainBot to do coding tasks with the dialoge loop prompt-window, make sure your instructions are clear, and interrupt with stop dialogue when the models start to drift. You are the operator of their autonomous coding.
+
+-The same can be said about story creation and the general creation of dialogue for games. If the model starts drifting hard, stop it reissue commands.
+
+-The background image can be changed, rename it to background.png and replace it with the one existing in the /gui/ folder.
 
 ---
 
