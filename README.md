@@ -42,6 +42,8 @@ BrainBot is built for developers who want:
 -If you use a model not on the list, follow the existing manifest.yaml template and add it.
 --the manifest file can be found at: /BrainBot/core/models/manifest.yaml
 
+-You can clean the manifest.yaml file up of all your unneeded/unwanted/unowned models. what is there is models I have directly tested.
+
 -Assign custom roles from the agent.json file 
 --the agent file can be found inside: /BrainBot/core/agents/"agent name"/agent.json
 
